@@ -1,0 +1,318 @@
+/* Основные стили */
+.overflow-hidden {
+    .cmp-3-header .cmp3-logo a {
+        color: #222;
+    }
+
+    .cmp-3-header {
+        border-bottom: 1px solid #222;
+        box-shadow: none;
+    }
+}
+
+
+
+.cmp-3-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background-color:#ecc80f;
+    color: white;
+    position: absolute;
+    height: 62px;
+    top: 0;
+    left: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    .cmp3 {
+        &-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            >li {
+                margin-left: 2rem;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            // sub-menu
+            >li {
+                .sub-menu {
+                    // min-width: 234px;
+                    padding: 20px 24px 20px 25px;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    background-color: #fff;
+                    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.14);
+                    margin-bottom: 0;
+
+                    margin-top: 10px;
+                    margin-left: -19px;
+
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(10px);
+                    transition: all 0.25s ease;
+                    z-index: 10;
+                    max-height: 0;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        margin-top: -10px;
+                        z-index: -1;
+                        max-height: 200px;
+                    }
+
+                    li {
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        list-style: none;
+                        margin-bottom: 15px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        a {
+                            color: #222;
+
+                            &:hover {
+                                //color: #F3BA00;
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // menu-item-has-children
+            li {
+                &.menu-item-has-children {
+                    position: relative;
+
+                    @media (min-width: 768px) {
+                        &:hover {
+                            >a {
+                                &::after {
+                                    transform: translateY(-50%) rotate(180deg);
+                                }
+                            }
+
+                            .sub-menu {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                                max-height: 1000px;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 1025px) {
+                        &.active {
+                            >a {
+                                &::after {
+                                    transform: translateY(-50%) rotate(180deg);
+                                }
+                            }
+
+                            .sub-menu {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+
+                    >a {
+                        padding-right: 22px;
+                        display: inline-block;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 0;
+                            background-image: url('../../../public/images/chevron-down.svg');
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-logo {
+            a {
+                font-family: "Roboto Condensed";
+                color: #fff;
+                font-size: 26px;
+                font-weight: bold;
+                text-decoration: none;
+                margin: 0;
+                transition: none;
+            }
+        }
+
+        /* Стили бургер-меню */
+        &-burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active {
+                img {
+                    filter: brightness(0) invert(0);
+                }
+            }
+
+            img {
+                filter: brightness(0) invert(1);
+                display: block;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .cmp3 {
+            &-burger {
+                display: flex;
+            }
+
+            &-nav {
+                display: none;
+                width: 100%;
+                height: calc(100vh - 62px);
+                overflow-y: auto;
+
+                padding: 50px 30px 50px;
+                position: fixed;
+                top: 62px;
+                left: 0;
+                background-color: #ecc80f;
+                z-index: 10;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            &-menu {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 20px;
+                text-align: center;
+
+                li {
+                    &.active {
+                        .sub-menu {
+                            display: block;
+                        }
+                    }
+
+                    &.menu-item-has-children {
+                        >a {
+                            padding-right: 24px;
+
+                            &::after {
+                                right: 0;
+                                filter: brightness(0) saturate(100%) invert(11%) sepia(0%) saturate(14%) hue-rotate(44deg) brightness(96%) contrast(92%);
+                            }
+                        }
+                    }
+
+                    .sub-menu {
+                        width: 100%;
+                        padding: 0;
+                        box-shadow: none;
+                        position: relative;
+                        border-radius: unset;
+                        border: none;
+                        margin: 0;
+                        transform: none;
+                        transition: none;
+                        display: none;
+                        margin-top: 15px;
+                        max-height: unset;
+
+                        &::after {
+                            display: none;
+                        }
+
+                        li {
+                            margin-bottom: 15px;
+                            font-size: 15px;
+
+                            a {}
+                        }
+                    }
+                }
+            }
+
+            &-menu {
+                li {
+                    a {
+                        color: #222;
+                    }
+                }
+
+                >li {
+                    .sub-menu {
+                        background-color: transparent;
+
+                        li {
+                            a {
+                                color: #222;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding: 0 20px;
+    }
+}

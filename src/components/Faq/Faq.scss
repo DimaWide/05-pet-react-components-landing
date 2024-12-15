@@ -1,0 +1,92 @@
+.cmp-1-faq {
+    padding: 100px 0 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1d1d1d;
+    color: #fff;
+    background-image: linear-gradient(to right, #ffcd00, #ffe000);
+
+    .cmp1 {
+        &-title {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #222;
+        }
+
+        &-faqList {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        &-item {
+            border-radius: 5px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid #222;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-title {
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+                margin: 0;
+            }
+
+            &-answer {
+                background-color: rgb(255 255 255 / 28%);
+                color: #333;
+
+                &-inner {
+                    padding: 20px 20px;
+                    border-top: 1px solid #494949;
+                }
+            }
+
+            &-question {
+                background-color: rgb(255, 218, 26);
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 25px;
+                color: #333;
+
+                span {
+                    color: #333;
+                    font-size: 44px;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cmp1 {
+            &-title {
+                font-size: 24px;
+                margin-bottom: 18px;
+            }
+
+            &-item {
+                &-title {
+                    font-size: 16px;
+                }
+
+                &-question {
+                    padding: 15px;
+
+                    span {
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+}

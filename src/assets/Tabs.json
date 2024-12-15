@@ -1,0 +1,56 @@
+{
+    "tabs": [
+        {
+            "id": 0,
+            "label": "Overview",
+            "icon": "FaHome",
+            "content": {
+                "title": "Welcome to Our Application!",
+                "text": "Our application is designed to simplify your daily tasks and enhance your productivity..."
+            }
+        },
+        {
+            "id": 1,
+            "label": "Features",
+            "icon": "FaStar",
+            "content": {
+                "title": "Key Features",
+                "list": [
+                    "🔍 Intuitive Dashboard: Easily navigate through your projects and tasks.",
+                    "🔔 Real-time Notifications: Stay updated with instant alerts for important events."
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "label": "Pricing",
+            "icon": "FaDollarSign",
+            "content": {
+                "title": "Affordable Plans for Everyone",
+                "text": "Choose the plan that suits your needs. Our pricing is flexible and transparent.",
+                "list": [
+                    "💼 Basic Plan: Free access to essential features.",
+                    "🔑 Pro Plan: $9.99/month for advanced functionalities."
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "label": "Reviews",
+            "icon": "FaComments",
+            "content": {
+                "title": "What Our Users Say",
+                "testimonials": [
+                    {
+                        "quote": "This application has completely transformed how I manage my tasks. It’s intuitive and saves me so much time!",
+                        "author": "Jane D."
+                    },
+                    {
+                        "quote": "The collaboration features have made working with my team a breeze. Highly recommend!",
+                        "author": "John S."
+                    }
+                ]
+            }
+        }
+    ]
+}
