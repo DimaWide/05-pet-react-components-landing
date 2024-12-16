@@ -13,7 +13,7 @@ const Contact = () => {
     });
 
     return (
-        <section className="cmp-contact">
+        <section className="cmp-contact" id="contact">
             <div className="data-container wcl-container">
 
                 <h2 className="data-title">Contact Us</h2>
@@ -25,13 +25,15 @@ const Contact = () => {
 
                             <ul className="data-b1-info">
                                 <li className="data-b1-info-item">
-                                    Phone: <a href="tel:+71234567890">+7 (123) 456-7890</a>
+                                    <span>Phone: </span> <a href="tel:+71234567890">+7 (123) 456-7890</a>
                                 </li>
+
                                 <li className="data-b1-info-item">
-                                    Email: <a href="mailto:info@company.com">info@company.com</a>
+                                    <span>Email:</span> <a href="mailto:info@company.com">info@company.com</a>
                                 </li>
+
                                 <li className="data-b1-info-item">
-                                    Address: <a href="https://www.google.com/maps/search/?api=1&query=New+York,+USA" target="_blank" rel="noopener noreferrer">New York, USA</a>
+                                    <span> Address:</span> <a href="https://www.google.com/maps/search/?api=1&query=New+York,+USA" target="_blank" rel="noopener noreferrer">New York, USA</a>
                                 </li>
                             </ul>
                         </div>
@@ -53,7 +55,7 @@ const Contact = () => {
                             <h3 className="data-b2-title">
                                 Request A Quote
                             </h3>
-                            
+
                             <Formik
                                 initialValues={{ name: '', email: '', message: '' }}
                                 validationSchema={validationSchema}

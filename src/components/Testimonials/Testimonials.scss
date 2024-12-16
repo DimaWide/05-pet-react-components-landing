@@ -43,6 +43,7 @@
 
     .slick-prev:before,
     .slick-next:before {
+        color: #646464;
         font-size: 40px;
     }
 
@@ -62,11 +63,9 @@
     }
 
     .data {
-        &-slider {}
-
         &-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
         &-item {
@@ -118,13 +117,26 @@
         }
     }
 
-    @media (max-width: 767px){
+
+
+    @media (max-width: 767px) {
+        padding-top: 85px;
+
         .slick-arrow {
             display: none !important;
         }
     }
 
     @media (max-width: 575px) {
+        .data-item-title {
+            font-size: 20px;
+        }
+
+        .data-title {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
         .slick-slider {
             padding: 0;
         }

@@ -1,8 +1,38 @@
-// Footer.js
-import React from 'react';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import './Footer.scss';
 
 const Footer = () => {
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const onSubmit = async (data) => {
+        setLoading(true);
+        setMessage('');
+
+        // Эмуляция отправки данных с задержкой
+        try {
+            // Имитация задержки для отправки данных (например, запрос на сервер)
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+
+            // После успешной отправки
+            setMessage('Thank you for subscribing! We will keep you updated.');
+            reset(); // Очищаем форму после успешной отправки
+        } catch (error) {
+            setMessage('Something went wrong. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Очищаем сообщение при вводе в поле
+    const handleInputChange = () => {
+        if (message) {
+            setMessage('');
+        }
+    };
+
     return (
         <footer className="sct-footer" id="wcl-main-footer">
             <div className="data-container wcl-container">
@@ -24,18 +54,10 @@ const Footer = () => {
                             <h3 className="data-widget-title">Navigation</h3>
 
                             <ul id="menu-menu-2" className="data-menu">
-                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-43 current_page_item menu-item-55">
-                                    <a href="http://dev.wp-blog/" aria-current="page">Home</a>
-                                </li>
-                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-56">
-                                    <a href="http://dev.wp-blog/categories/">Categories</a>
-                                </li>
-                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-183">
-                                    <a href="http://dev.wp-blog/blog/">Blog</a>
-                                </li>
-                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
-                                    <a href="http://dev.wp-blog/sample-page/">Sample Page</a>
-                                </li>
+                                <li className="menu-item"><a href="http://dev.wp-blog/">Home</a></li>
+                                <li className="menu-item"><a href="http://dev.wp-blog/categories/">Categories</a></li>
+                                <li className="menu-item"><a href="http://dev.wp-blog/blog/">Blog</a></li>
+                                <li className="menu-item"><a href="http://dev.wp-blog/sample-page/">Sample Page</a></li>
                             </ul>
                         </div>
                     </div>
@@ -49,19 +71,33 @@ const Footer = () => {
                             </div>
 
                             <div className="cmp-search-popup">
-                                <form role="search" method="get" className="search-form" action="/">
-                                    <input
-                                        type="email"
-                                        className="search-field"
-                                        placeholder="Enter email"
-                                        name="email"
-                                        required
-                                    />
 
-                                    <button type="submit" className="search-submit cmp-button">
-                                        Subscribe
-                                    </button>
+                                <form onSubmit={handleSubmit(onSubmit)} className="search-form">
+                                    <div className="cmp-inner">
+                                        <input
+                                            type="email"
+                                            className="search-field"
+                                            placeholder="Enter email"
+                                            {...register('email', {
+                                                required: "Email is required",
+                                                pattern: {
+                                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                                    message: "Invalid email address"
+                                                }
+                                            })}
+                                            onChange={handleInputChange} // Очистка сообщения при вводе
+                                        />
+
+                                        <button type="submit" className="search-submit cmp-button" disabled={loading}>
+                                            {loading ? 'Subscribing...' : 'Subscribe'}
+                                        </button>
+                                    </div>
+
+                                    {errors.email && <p className="cmp-note error-message">{errors.email.message}</p>}
+
+                                    {message && <p className="cmp-note success-message">{message}</p>}
                                 </form>
+
                             </div>
                         </div>
                     </div>

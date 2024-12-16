@@ -9,7 +9,7 @@ const Tabs = () => {
     const activeTabData = tabs.find(tab => tab.id === activeTab);
 
     return (
-        <section className='cmp-tabs'>
+        <section className='cmp-tabs' id='learn-more'>
             <div className='data-container wcl-container'>
                 <h2 className='data-title'>Learn More</h2>
 

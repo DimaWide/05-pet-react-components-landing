@@ -12,6 +12,10 @@
         }
     }
 
+    .swiper {
+        min-height: 520px;
+    }
+
     .cmp-button {
         font-weight: 600;
         font-size: 17px;
@@ -70,7 +74,6 @@
             opacity: 0.8;
         }
     }
-
 
     .data {
 
@@ -158,12 +161,10 @@
                 margin: 0px 11px;
             }
 
-            /* Основной стиль для контейнера */
             .animated-shape {
                 width: 200px;
                 height: 200px;
                 background-color: #4caf50;
-                /* Исходная форма — круг */
                 clip-path: circle(50%);
                 transition: clip-path 2s ease-in-out;
             }
@@ -179,6 +180,10 @@
             background: #ffee35;
             padding: 60px;
             border-radius: 140px;
+
+            @media (max-height: 550px) {
+                align-items: flex-start;
+            }
         }
 
         &-slide {
@@ -247,7 +252,7 @@
             }
 
             &-title {
-                font-size: 34px;
+                font-size: 40px;
             }
         }
     }
@@ -268,11 +273,11 @@
             display: none;
         }
 
-        .data-b1::before {
-            //    display: none;
-        }
-
         .data {
+            &-content {
+                padding: 46px 20px;
+            }
+
             &-container {
                 padding: 70px 25px;
             }

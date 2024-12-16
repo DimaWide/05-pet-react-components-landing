@@ -114,12 +114,12 @@
         }
     }
 
-
     @media (max-width: 991px) {
         .data {
             &-tab {
                 padding: 30px 25px;
-                &-title{
+
+                &-title {
                     font-size: 24px;
                 }
             }
@@ -127,7 +127,12 @@
     }
 
     @media (max-width: 767px) {
+        padding: 100px 0 100px;
+
         .data {
+            &-title{
+                margin-bottom: 20px;
+            }
             &-nav {
                 flex-wrap: wrap;
 
@@ -136,10 +141,17 @@
                     font-size: 16px;
                     background: #3a3a3a;
                     color: #fff;
-                    &.active{
+
+                    &.active {
                         background-color: #ffffff;
                         color: #e7ca00;
                     }
+                }
+            }
+
+            &-tab {
+                &-title {
+                    font-size: 20px;
                 }
             }
         }

@@ -39,7 +39,7 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="cmp-testimonials ">
+        <section className="cmp-testimonials" id='what-our-clients-say'>
             <div className="data-container wcl-container">
                 <h2 className="data-title">What Our Clients Say</h2>
 

@@ -12,12 +12,13 @@ const Header = () => {
             smooth: true
         });
 
-
         if (document.documentElement.classList.contains('overflow-hidden')) {
             document.documentElement.classList.remove('overflow-hidden');
             document.querySelector('.cmp-3-header .cmp3-nav.active').classList.remove('active')
             document.querySelector('.cmp3-burger').classList.remove('active');
             document.querySelector('.cmp3-burger img').src = '/images/header-menu-btn.svg';
+            setMenuOpen(!menuOpen);
+            setOpenSubMenuIndex(!openSubMenuIndex);
         }
     };
 
@@ -55,19 +56,30 @@ const Header = () => {
                     <li className="menu-item">
                         <a href="#home" onClick={() => scrollToSection('home')}>Home</a>
                     </li>
+
                     <li className="menu-item">
                         <a href="#about" onClick={() => scrollToSection('about')}>About</a>
                     </li>
+
                     <li className={`menu-item-has-children ${openSubMenuIndex === 0 ? 'active' : ''}`}>
                         <a href="#services" onClick={() => toggleSubMenu(0)}>Services</a>
                         <ul className={`sub-menu ${openSubMenuIndex === 0 ? 'active' : ''}`}>
-                            <li><a href="#development" onClick={() => scrollToSection('development')}>Development</a></li>
-                            <li><a href="#construction" onClick={() => scrollToSection('construction')}>Construction</a></li>
-                            <li><a href="#property-management" onClick={() => scrollToSection('property-management')}>Property Management</a></li>
+                            <li><a href="#our-features" onClick={() => scrollToSection('our-features')}>Our Features</a></li>
+                            <li><a href="#learn-more" onClick={() => scrollToSection('learn-more')}>Learn More</a></li>
+                            <li><a href="#what-our-clients-say" onClick={() => scrollToSection('what-our-clients-say')}>What Our Clients Say</a></li>
                         </ul>
                     </li>
+
+                    <li className="menu-item">
+                        <a href="#choose-your-plan" onClick={() => scrollToSection('choose-your-plan')}>Choose Your Plan</a>
+                    </li>
+
                     <li className="menu-item">
                         <a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a>
+                    </li>
+
+                    <li className="menu-item">
+                        <a href="#faq" onClick={() => scrollToSection('faq')}>FAQ</a>
                     </li>
                 </ul>
             </nav>

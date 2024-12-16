@@ -88,7 +88,7 @@ $colors: (
             }
 
             &-icon {
-                font-size: 46px;
+                font-size: 40px;
                 margin-bottom: 28px;
                 width: 70px;
                 height: 70px;
@@ -105,19 +105,20 @@ $colors: (
             }
 
             &-title {
-                font-size: 40px;
+                font-size: 34px;
                 line-height: normal;
                 max-width: 260px;
                 margin: 0 auto;
-                margin-bottom: 20px;
+                margin-bottom: 9px;
                 font-weight: 700;
+                font-family: "Roboto Condensed";
             }
 
             &-desc {
                 max-width: 320px;
                 margin: 0 auto;
                 font-size: 16px;
-                font-weight: 600;
+                font-weight: 500;
                 line-height: 1.5;
             }
         }
@@ -146,13 +147,15 @@ $colors: (
     }
 
     @media (max-width: 767px) {
+        padding: 100px 0 100px;
+
         .data {
             &-img {
                 display: none;
             }
 
             &-list {
-                row-gap: 40px;
+                row-gap: 20px;
             }
 
             &-item {
@@ -160,7 +163,7 @@ $colors: (
                 max-width: 300px;
 
                 &-title {
-                    font-size: 30px;
+                    font-size: 25px;
                 }
             }
         }

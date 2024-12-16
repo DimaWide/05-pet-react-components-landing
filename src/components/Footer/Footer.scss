@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 .sct-footer {
     padding: 40px 0 20px;
     background-color: #1f2937;
@@ -47,6 +40,7 @@
             margin-bottom: 15px;
 
             a {
+                font-family: "Roboto Condensed";
                 color: #fff;
                 font-size: 26px;
                 font-weight: bold;
@@ -149,6 +143,13 @@
             max-width: 350px;
             margin: 0 auto;
 
+            .cmp-note {
+                text-align: center;
+                max-width: 200px;
+                margin: 0 auto;
+                margin-top: 14px;
+            }
+
             input[type=search],
             input[type=email],
             input[type=text] {
@@ -162,26 +163,32 @@
                 border-radius: 4px;
                 margin-top: 10px;
             }
-        }
 
-        .data {
-            &-col {
-                width: 100%;
+    }
 
-                &:nth-child(3) {
-                    max-width: unset;
+    .data {
+        &-col {
+            width: 100%;
 
-                    .data-widget-subtitle {
-                        max-width: 240px;
-                        margin: 0 auto;
-                        margin-bottom: 15px;
-                    }
+            &:nth-child(3) {
+                max-width: unset;
+
+                .data-widget-subtitle {
+                    max-width: 240px;
+                    margin: 0 auto;
+                    margin-bottom: 15px;
                 }
             }
+        }
 
-            &-desc {
-                margin: 0 auto;
-            }
+        &-desc {
+            margin: 0 auto;
+            max-width: 210px;
+        }
+
+        &-widget-title {
+            margin-bottom: 10px;
         }
     }
+}
 }

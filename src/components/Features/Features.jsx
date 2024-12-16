@@ -22,8 +22,8 @@ const Features = () => {
     ];
 
     return (
-        <section className="cmp-features ">
-            <div className="wcl-container ">
+        <section className="cmp-features" id='our-features'>
+            <div className="wcl-container">
                 <h2 className="data-title">Our Features</h2>
 
                 <p className="data-subtitle ">

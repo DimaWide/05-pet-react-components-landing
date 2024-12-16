@@ -48,7 +48,7 @@ const Pricing = () => {
     ];
 
     return (
-        <section className='cmp-pricing'>
+        <section className='cmp-pricing' id='choose-your-plan'>
             <div className='data-container wcl-container'>
                 <h2 className='data-title'>Choose Your Plan</h2>
 

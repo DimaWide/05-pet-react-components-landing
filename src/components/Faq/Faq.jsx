@@ -39,7 +39,7 @@ const Faq = () => {
     }, [activeIndex]);
 
     return (
-        <div className="cmp-1-faq">
+        <div className="cmp-1-faq" id='faq'>
             <div className="cmp1-container wcl-container">
                 <h2 className="cmp1-title">Frequently Asked Questions</h2>
 

@@ -10,14 +10,12 @@
     }
 }
 
-
-
 .cmp-3-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
-    background-color:#ecc80f;
+    background-color: #ecc80f;
     color: white;
     position: absolute;
     height: 62px;
@@ -27,6 +25,10 @@
     z-index: 100;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
 
     .cmp3 {
         &-menu {
@@ -50,7 +52,7 @@
             // sub-menu
             >li {
                 .sub-menu {
-                    // min-width: 234px;
+                    min-width: 160px;
                     padding: 20px 24px 20px 25px;
                     position: absolute;
                     left: 0;

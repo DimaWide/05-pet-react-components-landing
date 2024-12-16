@@ -6,14 +6,14 @@
 
     .data {
         &-title {
-            font-size: 64px;
+            font-size: 44px;
             margin-bottom: 10px;
         }
 
         &-subtitle {
             max-width: 320px;
             margin: 0 auto;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.5;
             font-weight: 400;
             margin-bottom: 50px;
@@ -37,6 +37,7 @@
             border: 6px solid #555555;
             width: 33.33%;
             padding: 30px 20px;
+            line-height: normal;
 
             &-icon {
                 svg {
@@ -44,9 +45,15 @@
                 }
             }
 
+            &-title{
+                margin-bottom: 10px;
+            }
+
             &-desc {
-                max-width: 180px;
+                max-width: 250px;
                 margin: 0 auto;
+                font-size: 16px;
+                font-weight: 500;
             }
         }
     }
@@ -54,10 +61,6 @@
 
     @media (max-width: 991px) {
         .data {
-            &-title {
-                font-size: 50px;
-            }
-
             &-subtitle {
                 font-size: 18px;
             }
@@ -71,27 +74,29 @@
             &-item {
                 min-width: 240px;
             }
-
         }
     }
 
     @media (max-width: 767px) {
+        padding: 100px 0 100px;
+
         .data {
             &-title {
-                font-size: 40px;
+                font-size: 30px;
             }
 
             &-subtitle {
                 font-size: 16px;
+                margin-bottom: 30px;
             }
 
-            &-list{
+            &-list {
                 row-gap: 30px;
             }
 
             &-item {
                 &-title {
-                    font-size: 24px;
+                    font-size: 25px;
                     margin-bottom: 9px;
                 }
             }
