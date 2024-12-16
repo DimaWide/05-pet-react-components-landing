@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Features from './components/Features/Features';
 import Footer from './components/Footer/Footer';
@@ -16,10 +15,8 @@ const App = () => {
     return (
         <div>
             <Header />
-
             <main className="">
-            <FullWidthSlider />
-                {/* <Hero /> */}
+                <FullWidthSlider />
                 <About />
                 <Features />
                 <Tabs />
@@ -28,12 +25,7 @@ const App = () => {
                 <Contact />
                 <Faq />
             </main>
-
             <Footer />
-
-            {/* <footer className="bg-gray-800 text-white text-center py-4">
-                <p>© 2024 MyWebsite. All rights reserved.</p>
-            </footer> */}
         </div>
     );
 };

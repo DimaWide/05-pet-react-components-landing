@@ -34,6 +34,7 @@ const FAQ = () => {
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-bold text-center mb-8 text-blue-800">Frequently Asked Questions</h2>
+
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <div
@@ -45,10 +46,12 @@ const FAQ = () => {
                                 onClick={() => toggleFAQ(index)}
                             >
                                 <h3 className="text-xl font-semibold text-blue-800">{faq.question}</h3>
+
                                 <span className={`text-blue-600 transition-transform ${activeIndex === index ? 'rotate-180' : 'rotate-0'}`}>
                                     ▼
                                 </span>
                             </div>
+
                             <div
                                 className={`overflow-hidden transition-all duration-500 ${activeIndex === index ? 'max-h-40 p-6' : 'max-h-0 p-0'}`}
                             >

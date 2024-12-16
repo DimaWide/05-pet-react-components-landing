@@ -10,23 +10,19 @@ const Footer = () => {
     const onSubmit = async (data) => {
         setLoading(true);
         setMessage('');
-
-        // Эмуляция отправки данных с задержкой
+       
         try {
-            // Имитация задержки для отправки данных (например, запрос на сервер)
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-
-            // После успешной отправки
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+           
             setMessage('Thank you for subscribing! We will keep you updated.');
-            reset(); // Очищаем форму после успешной отправки
+            reset();
         } catch (error) {
             setMessage('Something went wrong. Please try again later.');
         } finally {
             setLoading(false);
         }
     };
-
-    // Очищаем сообщение при вводе в поле
+   
     const handleInputChange = () => {
         if (message) {
             setMessage('');
@@ -85,7 +81,7 @@ const Footer = () => {
                                                     message: "Invalid email address"
                                                 }
                                             })}
-                                            onChange={handleInputChange} // Очистка сообщения при вводе
+                                            onChange={handleInputChange} 
                                         />
 
                                         <button type="submit" className="search-submit cmp-button" disabled={loading}>
