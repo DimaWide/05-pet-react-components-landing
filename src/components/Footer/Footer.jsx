@@ -29,6 +29,12 @@ const Footer = () => {
         }
     };
 
+    const handleButtonClick = () => {
+        if (message) {
+            setMessage('');
+        }
+    };
+
     return (
         <footer className="sct-footer" id="wcl-main-footer">
             <div className="data-container wcl-container">
@@ -84,7 +90,12 @@ const Footer = () => {
                                             onChange={handleInputChange} 
                                         />
 
-                                        <button type="submit" className="search-submit cmp-button" disabled={loading}>
+                                        <button 
+                                            type="submit" 
+                                            className="search-submit cmp-button" 
+                                            disabled={loading}
+                                            onClick={handleButtonClick}  // Reset the message on button click
+                                        >
                                             {loading ? 'Subscribing...' : 'Subscribe'}
                                         </button>
                                     </div>
