@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-import './Faq.scss'; // Import SCSS styles
+import './Faq.scss';
 
 const Faq = () => {
     const [activeIndex, setActiveIndex] = useState(null);

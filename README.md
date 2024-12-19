@@ -1,20 +1,15 @@
-# React компоненты для [Название вашего проекта]
+# React Components for Landing Page
 
-Этот репозиторий содержит переиспользуемые React-компоненты для приложения [Название вашего проекта]. 
-Проект разработан с использованием **React** и развернут на **Vercel** для демонстрации.
+This repository contains reusable React components for a Landing Page.  
+The project is built with **React** and deployed on **Vercel** for demonstration purposes.
 
-## Сайт
+## Website
 
-**Ссылка на сайт:** [Landing React](https://landing-react-components.vercel.app/)
+**Website link:** [Landing React](https://landing-react-components.vercel.app/)
 
-Скриншот: [Главная страница](https://github.com/DimaWide/wp-themes/blob/main/assets-data/vintage-splendor/screencapture-avintagesplendor.jpg) | [Мобильный вид](screencapture-avintagesplendor-mobile.jpg)
+Screenshots: [Homepage](https://github.com/DimaWide/05-react-components-landing/blob/main/src/assets/home.jpg) | [Mobile View](https://github.com/DimaWide/05-react-components-landing/blob/main/src/assets/home-mobile.jpg)
 
-## Скриншоты
-
-![Скриншот 1](ссылка_на_скриншот_1.jpg)  
-![Скриншот 2](ссылка_на_скриншот_2.jpg)
-
-## Компоненты
+## Components
 
 - **About**
 - **Contact**
@@ -27,5 +22,4 @@
 - **Tabs**
 - **Testimonials**
 
-## Структура папок
-
+## Folder Structure
