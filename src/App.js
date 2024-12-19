@@ -9,7 +9,7 @@ import Contact from './components/Contact/Contact';
 import Pricing from './components/Pricing/Pricing';
 import Tabs from './components/Tabs/Tabs';
 import FullWidthSlider from './components/FullWidthSlider/FullWidthSlider';
-
+import './index.css';
 
 const App = () => {
     return (
