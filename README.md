@@ -21,5 +21,3 @@ Screenshots: [Homepage](https://github.com/DimaWide/05-react-components-landing/
 - **Pricing**
 - **Tabs**
 - **Testimonials**
-
-## Folder Structure
