@@ -104,7 +104,6 @@ const Footer = () => {
 
                                     {message && <p className="cmp-note success-message">{message}</p>}
                                 </form>
-
                             </div>
                         </div>
                     </div>

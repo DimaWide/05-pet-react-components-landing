@@ -9,6 +9,8 @@ The project is built with **React** and deployed on **Vercel** for demonstration
 
 Screenshots: [Homepage](https://github.com/DimaWide/05-react-components-landing/blob/main/src/assets/home.jpg) | [Mobile View](https://github.com/DimaWide/05-react-components-landing/blob/main/src/assets/home-mobile.jpg)
 
+![Preview](https://github.com/DimaWide/05-react-components-landing/blob/main/src/assets/preview.png)
+
 ## Components
 
 - **About**
